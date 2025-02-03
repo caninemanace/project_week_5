@@ -1,0 +1,36 @@
+.nav{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(121, 14, 14);
+    border-radius: 20px;
+}
+.logo{
+   margin-top: 40;
+}
+.heading{
+    text-align: center;
+    margin-top: -160px;
+    font-size: xxx-large;
+}
+.lists{
+    display: flex;
+    margin-left:9cm;
+    gap: 500px;
+    font-size: xx-large;
+    list-style: none;
+    color: aliceblue;
+    text-decoration: none;
+}
+.lists li {
+    display: inline;
+}
+
+.lists a {
+    text-decoration: none; /* Removes underlining from links */
+    color: #000000; /* Link color */
+    font-size: 30px;
+}
+
+.lists a:hover {
+    color: #ffffff; /* Darker color on hover */
+}
