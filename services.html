@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        <title>LIFELINE HOSPITAL</title>
-    </head>
-    <body>
-        <div class="nav">
-           <img src="image-removebg-preview.png" class="logo">
-           <p class="heading"><strong>LIFELINE MEDICAL HOSPITAL (SERVICES)</strong></p>
-           <ul class="lists">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFELINE HOSPITAL (Services)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <img src="image-removebg-preview.png" class="logo">
+        <p class="heading"><strong>LIFELINE MEDICAL HOSPITAL (SERVICES)</strong></p>
+        <ul class="lists">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="help.html">Help</a></li>
-           </ul>
-        </div>
+        </ul>
+    </div>
 
-
-        <section>
+    <section>
         <h2>Your Assigned Doctor</h2>
-<div id="doctor-info"></div>
-<h2>Previous Doctors Assigned</h2>
-<div id="doctor-history"></div>
+        <div id="doctor-info"></div>
 
-<script>
-    // Retrieve stored doctor data
-    let doctorHistory = JSON.parse(localStorage.getItem("doctorHistory")) || [];
+        <h2>Previous Doctors Assigned</h2>
+        <div id="doctor-history"></div>
+    </section>
 
-    if (doctorHistory.length > 0) {
-        // Display the latest assigned doctor
-        let latestDoctor = doctorHistory[doctorHistory.length - 1];
-        document.getElementById("doctor-info").innerHTML = `
-            <h3>Assigned Doctor:</h3>
-            <p><strong>Name:</strong> ${latestDoctor.Name}</p>
-            <p><strong>Specialty:</strong> ${latestDoctor.Speciality}</p>
-            <p><strong>Description:</strong> ${latestDoctor.Description}</p>
-            <p><strong>Contact:</strong> ${latestDoctor.Contact}</p>
-            <img src="${latestDoctor.Image}" alt="Doctor Image" width="150">
-        `;
+    <section class="clearbuttonsection">
+        <button onclick="clearDoctorHistory()" class="clearbutton">Clear History</button>
+    </section>
 
-        // Display the history of previous doctors
-        let historyHTML = "";
-        doctorHistory.forEach((doctor, index) => {
-            historyHTML += `
-                <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
-                    <h4>Doctor #${index + 1}</h4>
-                    <p><strong>Name:</strong> ${doctor.Name}</p>
-                    <p><strong>Specialty:</strong> ${doctor.Speciality}</p>
-                    <p><strong>Description:</strong> ${doctor.Description}</p>
-                    <p><strong>Contact:</strong> ${doctor.Contact}</p>
-                    <img src="${doctor.Image}" alt="Doctor Image" width="100">
-                </div>
-            `;
-        });
+    <footer class="footer">
+        PLEASE NOTE THAT THE DOCTORS WILL BE NOTIFIED AND WILL REACH OUT TO YOU THROUGH YOUR EMAIL.
+    </footer>
 
-        document.getElementById("doctor-history").innerHTML = historyHTML;
-    } else {
-        document.getElementById("doctor-info").innerHTML = "<p>No doctor assigned yet.</p>";
-    }
-</script>
-</section>
-<section class="clearbuttonsection">
-    <button onclick="clearDoctorHistory()" class="clearbutton">Clear History</button>
-
-</section>
-<footer class="footer">PLEASE NOTE THAT THE DOCTORS WILL BE NOTIFIED AND WILL REACH OUT TO YOU THROUGH YOUR EMAIL</footer>
-
+    <script>
+        // Retrieve doctor data
+        let doctorHistory = JSON.parse(localStorage.getItem("doctorHistory")) || [];
     
+        if (doctorHistory.length > 0) {
+            // Display the latest assigned doctor
+            let latestDoctor = doctorHistory[doctorHistory.length - 1];
+            document.getElementById("doctor-info").innerHTML = `
+                <h3>Assigned Doctor:</h3>
+                <p><strong>Name:</strong> ${latestDoctor.Name}</p>
+                <p><strong>Specialty:</strong> ${latestDoctor.Speciality}</p>
+                <p><strong>Description:</strong> ${latestDoctor.Description}</p>
+                <p><strong>Contact:</strong> ${latestDoctor.Contact}</p>
+                <img src="${latestDoctor.Image}" alt="Doctor Image" width="150">
+            `;
+    
+            // Display doctor history
+            let historyHTML = "";
+            doctorHistory.forEach((doctor, index) => {
+                historyHTML += `
+                    <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                        <h4>Doctor #${index + 1}</h4>
+                        <p><strong>Name:</strong> ${doctor.Name}</p>
+                        <p><strong>Specialty:</strong> ${doctor.Speciality}</p>
+                        <p><strong>Description:</strong> ${doctor.Description}</p>
+                        <p><strong>Contact:</strong> ${doctor.Contact}</p>
+                        <img src="${doctor.Image}" alt="Doctor Image" width="100">
+                    </div>
+                `;
+            });
+    
+            document.getElementById("doctor-history").innerHTML = historyHTML;
+        } else {
+            document.getElementById("doctor-info").innerHTML = "<p>No doctor assigned yet.</p>";
+        }
+    </script>
+    
+
 </body>
 </html>
+

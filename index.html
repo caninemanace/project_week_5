@@ -59,7 +59,7 @@
         
 
         <section>
-            <div class="loginform" onsubmit="loginPrompt()">
+            <div class="loginform">
                 <form class="details">
                 <label for="">ENTER USERNAME:</label>
                 <input type="text" id="username" required>
@@ -73,7 +73,7 @@
                 <input type="text" id="password" required>
                 <span id="passworderror" class="error"></span><hr>
     
-                <button onclick="SubmitEvent" class="button" value="log in">SUBMIT PATIENT DETAILS</button>
+                <button onclick="loginPrompt(event)" class="button" value="log in" type="button">SUBMIT PATIENT DETAILS</button>
                 </form>
     
             </div>
