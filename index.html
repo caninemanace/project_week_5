@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
+        <title>LIFELINE HOSPITAL</title>
     </head>
     <body>
         <div class="nav">
@@ -36,16 +37,48 @@
         </section>
         <section class="clipsection">
             <p class="aboutparagraph"><strong>OUR LIFELINE MEDICAL HOSPITAL ENTAILS</strong></p>
-            <iframe src="https://www.youtube.com/embed/mUzq_h1GCXE" class="clip"></iframe>
+            <iframe src="" class="clip"></iframe>
         </section>
         <section class="services">
+            <p class="aboutparagraph"><strong>
+                PLEASE ENTER YOUR MEDICAL CHALLANGES WITH THE ATMOST SPECIFICITY AND WE WILL ASSIGN YOU A DOCTOR WHO WILL GUIDE YOU INTO A HEALTHIER FUTURE <br><br>
+                Please note that is is best for you to sign in into our platform if you do not have an account yet.We can still provide services whether you have not signed but inorder to make it easier for our doctors to have a clear follow up on your health is best to sign up <br><br>
+                Enter any key description of your symptoms such as <br>:Heart,Skin,Mental,common illness and check up
+            </strong></p>
+
+            <div class="firstlabel">
+            <label for="">SYMPTOMS:</label>
+            <input type="text" id="symptoms" oninput="clearError('symptomserror')"><br><br>
+            <span id="symptomserror" class="error"></span>
+
+            <button class="button" onclick="yourDoctor()">SUBMIT</button>
+            <p class="directiontoservices">proceed to the sevrices section to view your assigned doctor</p>
+            </div>
 
         </section>
+        
 
-
-
-
-
+        <section>
+            <div class="loginform" onsubmit="loginPrompt()">
+                <form class="details">
+                <label for="">ENTER USERNAME:</label>
+                <input type="text" id="username" required>
+                <span id="usernameerror" class="error"></span><hr>
+    
+                <label for="">EMAIL:</label>
+                <input type="text" id="email" required>
+                <span id="emailerror" class="error"></span><hr>
+    
+                <label for="">PASSWORD:</label>
+                <input type="text" id="password" required>
+                <span id="passworderror" class="error"></span><hr>
+    
+                <button onclick="SubmitEvent" class="button" value="log in">SUBMIT PATIENT DETAILS</button>
+                </form>
+    
+            </div>
+    
+        </section>
 
     </body>
 </html>
