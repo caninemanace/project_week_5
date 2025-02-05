@@ -28,7 +28,7 @@ function yourDoctor() {
     }
 
     if (!assignedDoctor) {
-        symptomserror.innerText = "Please enter one of: Heart, Skin, Mental, or Common illnesses.";
+        symptomserror.innerText = "Please enter one of: Heart, Skin, Mental, or Common illnesses and check-ups.";
         return;
     }
 
