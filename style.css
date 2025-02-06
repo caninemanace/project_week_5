@@ -1,189 +1,326 @@
-body{
+/* ========== Global Styles ========== */
+body {
     background-color: #7e7474;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.nav{
+
+/* ========== Navigation ========== */
+.nav {
     width: 100%;
     height: 20vh;
     background-color: rgb(121, 14, 14);
     border-radius: 20px;
-}
-.logo{
-   margin-top: 40;
-}
-.heading{
-    text-align: center;
-    margin-top: -160px;
-    font-size: xxx-large;
-}
-.lists{
     display: flex;
-    margin-left:9cm;
-    gap: 500px;
-    font-size: xx-large;
-    list-style: none;
-    color: aliceblue;
-    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
 }
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Navigation List */
+.lists {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .lists li {
     display: inline;
 }
 
 .lists a {
-    text-decoration: none; /* Removes underlining from links */
-    color: #000000; /* Link color */
-    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
 }
 
 .lists a:hover {
-    color: #ffffff; /* Darker color on hover */
+    color: #000000;
 }
-.about{
+
+/* ========== About Section ========== */
+.about {
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: rgb(121, 14, 14);
     margin-top: 20px;
     border-radius: 20px;
-    color: #ffffff;
-}
-.aboutparagraph{
+    padding: 2rem;
+    color: white;
     text-align: center;
-    font-size: 30px;
-    color: #ffffff;
 }
-.clipsection{
+
+.aboutparagraph {
+    font-size: 1.5rem;
+}
+
+/* ========== Video Clip Section ========== */
+.clipsection {
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: rgb(121, 14, 14);
     margin-top: 20px;
     border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
 }
-.clip{
-    width: 90vw;
-    height: 50vh;
+
+.clip {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
     border-radius: 20px;
-    margin-left: 80px;
+    display: block;
+    margin: 0 auto;
 }
-.services{
+
+/* ========== Services Section ========== */
+.services {
     width: 100%;
-    height: 80vh;
+    height: auto;
     background-color: rgb(121, 14, 14);
     margin-top: 20px;
     border-radius: 20px;
+    padding: 2rem;
 }
-.firstlabel{
-    margin-left: 10cm;
-    margin-top: 80px;
-    font-size: 50px;
+
+.firstlabel {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
-#symptoms{
-    font-size: 50px;
+
+#symptoms {
+    font-size: 1.5rem;
     background-color: #7e7474;
+    padding: 10px;
+    border-radius: 5px;
 }
-.button{
-    font-size: 40px;
-    margin-left: 550px;
+
+/* ========== Buttons ========== */
+.button {
+    font-size: 1.5rem;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
     background-color: #7e7474;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.directiontoservices{
-    color: #7e7474;
-    margin-left: 200px;
-    margin-top: 100px;
-    color: #ffffff;
+
+.button:hover {
+    background-color: #5e5e5e;
 }
-.error{
-    color: aliceblue;
+
+.clearbutton {
+    font-size: 1.5rem;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #7e7474;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-/* Style the doctor information container */
+
+.clearbutton:hover {
+    background-color: #5e5e5e;
+}
+
+/* ========== Doctor Info & History ========== */
 #doctor-info, #doctor-history {
-    background-color: rgb(121, 14, 14); /* Set background to red */
+    background-color: rgb(121, 14, 14); 
     padding: 20px;
     border-radius: 10px;
-    color: rgb(255, 255, 255); /* Make text more readable */
+    color: white; 
     text-align: center;
-    font-size: 20px; /* Increase font size */
+    font-size: 1.2rem;
 }
 
-/* Style the images */
 #doctor-info img, #doctor-history img {
-    width: 500px;  /* Make images larger */
-    height: auto;  /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded edges */
-    border: 3px solid white; /* Add white border */
+    width: 90%;
+    max-width: 500px;
+    height: auto; 
+    border-radius: 10px; 
+    border: 3px solid white; 
 }
 
-/* Style headings */
 h3, h4 {
-    font-size: 40px; /* Increase heading size */
+    font-size: 2rem;
 }
 
-/* Style paragraphs */
 p {
-    font-size: 30px; /* Increase paragraph size */
-}
-.clearbuttonsection{
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(121, 14, 14);
-    margin-top: 20px;
-    border-radius: 20px;
-}
-.clearbutton{
-    margin-left: 21cm;
-    margin-top: 25px;
-    font-size: 40px;
-    background-color: #7e7474;
-}
-.footer{
-    text-align: center;
-}
-.loginform{
-    width: 100%;
-    height: 45vh;
-    background-color: rgb(121, 14, 14);
-    margin-top: 20px;
-    border-radius: 20px;
-}
-.details{
-    margin-left: 2cm;
-    font-size: 40px;
-}
-#username{
-    font-size: 40px;
-}
-#email{
-    font-size: 40px;
-}
-#password{
-    font-size: 40px;
-}
-.helpsection{
-    width: 100%;
-    height: 74vh;
-    background-color: rgb(121, 14, 14);
-    margin-top: 20px;
-    border-radius: 20px; 
-}
-.helpParagraph{
-    text-align: center;
-}
-/* Mobile-first styles (default) */
-body {
-    font-size: 14px;
+    font-size: 1.2rem;
 }
 
-/* Tablets and larger (min-width: 768px) */
+/* ========== Login Form ========== */
+.loginform {
+    width: 100%;
+    height: auto;
+    background-color: rgb(121, 14, 14);
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.details {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#username, #email, #password {
+    font-size: 1.2rem;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+}
+
+/* ========== Help Section ========== */
+.helpsection {
+    width: 100%;
+    height: auto;
+    background-color: rgb(121, 14, 14);
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.helpParagraph {
+    text-align: center;
+}
+
+/* ========== Footer ========== */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(121, 14, 14);
+    color: white;
+}
+
+
+/*             RESPONSIVE DESIGN      */
+
+/*  Small screens (Mobile) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .lists {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .aboutparagraph {
+        font-size: 1.2rem;
+    }
+
+    .clip {
+        width: 100%;
+    }
+
+    .button, .clearbutton {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    #doctor-info img, #doctor-history img {
+        width: 100%;
+    }
+
+    .firstlabel {
+        font-size: 1.5rem;
+    }
+}
+
+/*  Tablets (768px and up) */
 @media screen and (min-width: 768px) {
     body {
         font-size: 16px;
     }
+
+    .lists {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .aboutparagraph {
+        font-size: 1.5rem;
+    }
+
+    .clip {
+        width: 80%;
+    }
+
+    .button, .clearbutton {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+    }
 }
 
-/* Desktops and larger (min-width: 1024px) */
+/*  Large Screens (1024px and up) */
 @media screen and (min-width: 1024px) {
     body {
         font-size: 18px;
     }
+
+    .nav {
+        justify-content: space-between;
+        padding: 1rem 5rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .lists {
+        gap: 3rem;
+    }
+
+    .aboutparagraph {
+        font-size: 1.8rem;
+    }
+
+    .clip {
+        width: 70%;
+    }
+
+    .button, .clearbutton {
+        font-size: 1.8rem;
+        padding: 12px 24px;
+    }
 }
+
 
 
 
